@@ -1,0 +1,43 @@
+<p>The hero's birthday is {{ birthday | date }}</p>
+<p>The hero's birthday is {{ birthday | date:"MM/dd/yy" }} </p>
+<p>The hero's birthday is {{ birthday | date:format }}</p>
+<button (click)="toggleFormat()">Toggle Format</button>
+
+<h2>Birthday Pipe Chaining</h2>
+<p>
+  The chained hero's birthday is {{ birthday | date }}
+</p>
+<p>
+  The chained hero's birthday is {{ birthday | date:'fullDate' | uppercase}}
+</p>
+<p>
+  The chained hero's birthday is {{ ( birthday | date:'MM-dd-yy' )}}
+</p>
+<!-- <h2>Power Boost Calculator</h2>
+<div>Normal power: <input [(ngModel)]="power"></div>
+<div>Boost factor: <input [(ngModel)]="factor"></div>
+<p>
+  Super Hero Power: {{power | exponentialStrength: factor}}
+</p>
+<h2>Heroes from JSON File</h2>
+
+<div *ngFor="let hero of ('assets/heroes.json' | fetch) ">
+  {{hero.name}}
+</div>
+
+<p>Heroes as JSON:
+  {{'assets/heroes.json' | fetch | json}}
+</p> -->
+<table>
+  <tr>
+    <td>
+      <app-flying-heroes></app-flying-heroes>
+    </td>
+    <td>
+      <app-flying-heroes-impure></app-flying-heroes-impure>
+    </td>
+    <td>
+      <app-animation-template></app-animation-template>
+    </td>
+  </tr>
+</table>

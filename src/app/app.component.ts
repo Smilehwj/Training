@@ -17,6 +17,7 @@ export class AppComponent {
 
   myHero = this.heroes[0];
   str: string;
+  inputVal: string;
 
   alert(msg?: string) { window.alert(msg); }
   getVal(): number { return this.heroes.length; }

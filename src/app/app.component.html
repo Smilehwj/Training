@@ -1,15 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
 <h2>My favorite hero is: {{myHero.name}}</h2>
 <ul>
-  <li *ngFor='let hero of heroes'>
+  <li *ngFor="let hero of heroes">
     {{hero.name}}
   </li>
-  <p *ngIf='heroes.length>4'> this is a test for ngIf! the length of heroes is {{heroes.length}}</p>
+  <p *ngIf="heroes.length>4"> this is a test for ngIf! the length of heroes is {{heroes.length}}</p>
 </ul>
 <p>The sum of 1 + 1 is {{1 + 1}}</p>
 <p>The sum of 1 + 1 is {{getVal()}}</p>
@@ -17,6 +11,34 @@
   <input #phone placeholder="phone number">
   <button (click)="callPhone(phone.value)">Call</button>
 </div>
-<div (keyup)='0' (keydown)='0' class="content">
+<div (keyup)="0" (keydown)="0" class="content">
   <input #heroInput>{{heroInput.value}}
+</div>
+
+<div class="content">
+  <input [(ngModel)]="inputVal">{{inputVal}}
+</div>
+
+<div>
+  <app-lifehook-parent></app-lifehook-parent>
+</div>
+
+<div>
+  <app-interaction></app-interaction>
+</div>
+<div>
+  <app-style></app-style>
+</div>
+
+<div>
+  <app-ad></app-ad>
+</div>
+<div>
+  <app-attribute-directive></app-attribute-directive>
+</div>
+<div>
+  <app-pipe-template></app-pipe-template>
+</div>
+<div>
+  <app-structural-directive></app-structural-directive>
 </div>
